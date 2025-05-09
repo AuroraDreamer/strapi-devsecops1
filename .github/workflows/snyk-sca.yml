@@ -28,3 +28,10 @@ jobs:
         command: test
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        
+    - name: Monitor project with Snyk
+      uses: snyk/actions/node@v1
+      with:
+        command: monitor
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
